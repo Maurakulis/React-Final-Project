@@ -2,10 +2,13 @@ import { useContext, useState } from 'react'
 import * as Yup from 'yup'
 import UsersContext from '../contexts/UsersContext'
 import { useFormik } from 'formik'
+import { useNavigate } from 'react-router'
 
 const Login = () => {
   const [failedLogin, setFailedLogin] = useState(false)
   const { users, setCurrentUser } = useContext(UsersContext)
+
+  const navigate = useNavigate()
 
   const values = {
     loginEmail: '',
@@ -29,7 +32,7 @@ const Login = () => {
       if (loggedInUser) {
         setCurrentUser(loggedInUser)
         setFailedLogin(false)
-        console.log('pavyko')
+        navigate('/allQuestions')
       } else {
         setFailedLogin(true)
       }
