@@ -2,6 +2,7 @@ import { useContext, useState } from "react"
 import UsersContext from "../contexts/UsersContext"
 import * as Yup from 'yup'
 import { useFormik } from "formik"
+import { UserActionType } from "../contexts/constants"
 
 const Register = () => {
   const [failedRegistration, setFailedRegistration] = useState(false)
@@ -40,6 +41,20 @@ const Register = () => {
     validationSchema: validationSchema,
     onSubmit: (values) => {
       console.log(values)
+      const registerUser = users.find(user => user.email === values.email)
+
+      if (registerUser === undefined) {
+        setFailedRegistration(false)
+        setCurrentUser(values)
+
+        dispatch({
+          type: UserActionType.REGISTER,
+          email: values.email,
+          password: values.password,
+        })
+      } else {
+        setFailedRegistration(true)
+      }
     }
   })
 
@@ -96,6 +111,9 @@ const Register = () => {
           }
         </div>
         <input type="submit" value="Register" />
+        {
+          failedRegistration && <p>This email is already used</p>
+        }
       </form>
     </>
   )
