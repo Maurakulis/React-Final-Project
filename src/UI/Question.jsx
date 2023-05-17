@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom"
 import Vote from "./Vote"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import UsersContext from "../contexts/UsersContext"
 import QuestionsContext from "../contexts/QuestionsContext"
 import { QuestionActionType } from "../contexts/constants"
+import QuestionMenu from "./QuestionMenu"
 
 const Question = ({ question }) => {
   const { users, currentUser } = useContext(UsersContext)
   const { dispatch } = useContext(QuestionsContext)
+
 
   const user = users.find(e => e.id === question.creatorId)
 
@@ -26,10 +28,8 @@ const Question = ({ question }) => {
             </div>
           </>
         }
-        {
-          currentUser && question.creatorId === currentUser.id &&
-          <i className="fa-solid fa-ellipsis"></i>
-        }
+        <QuestionMenu question={question}></QuestionMenu>
+
       </div>
       <div className="questionInfo">
         <Vote question={question} />
