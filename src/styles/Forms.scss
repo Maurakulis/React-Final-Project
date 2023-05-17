@@ -1,0 +1,28 @@
+@use 'variables' as v;
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 50px 0 80px;
+
+  input {
+    line-height: 28px;
+    padding: 8px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 44px;
+    border: unset;
+    border-radius: 4px;
+    background-color: #ffffff;
+    outline-color: v.$outline;
+    box-shadow: #3c425729 0px 0px 0px 1px;
+  }
+
+  input[type=submit] {
+    color: #fff;
+    background-color: v.$button-color;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}

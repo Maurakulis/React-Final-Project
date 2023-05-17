@@ -1,11 +1,11 @@
-import './App.css'
-import Register from './Pages/Register'
+import './styles/App.css'
+import LoginAndRegister from './Pages/LoginAndRegister'
 
-function App() {
+const App = () => {
 
   return (
     <>
-      <Register />
+      <LoginAndRegister />
     </>
   )
 }

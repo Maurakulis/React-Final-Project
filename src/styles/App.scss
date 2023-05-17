@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
+
+#root {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+
+  >div {
+    border-right: 1px solid v.$outline;
+  }
+}
+
+@import './Forms';
