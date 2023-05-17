@@ -4,10 +4,11 @@ import Register from "../UI/Register"
 const LoginAndRegister = () => {
 
   return (
-    <>
+    <main>
       <Login />
+      <div></div>
       <Register />
-    </>
+    </main>
   )
 }
 
