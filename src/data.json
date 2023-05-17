@@ -1,0 +1,56 @@
+{
+  "questions": [
+    {
+      "title": "Job Interview Question",
+      "text": "What's your opinion of the following job interview question? In the requirement it never mentions about to have classic ASP experience. But the question is \"What are the differences between ADO.NET DataSet and ADO Record Set?\".",
+      "votes": 0,
+      "isEdited": false,
+      "id": "1",
+      "creatorId": "98f8f269-a7a3-4676-b4d7-fa91e51baec9"
+    },
+    {
+      "title": "how to convert whole html file with multiple pages into pdf using python( already use pdfkit module)?",
+      "text": "I tried pdfkit module of python but only first page is converted into pdf and desired , identical output is not obtained. \n I tried pdfkit module along with config and option but i am not getting output proper. I am expecting identical same html file pages to be converted into pdf",
+      "votes": 0,
+      "isEdited": false,
+      "id": "2",
+      "creatorId": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
+    }
+  ],
+  "answers": [
+    {
+      "text": "Well, they can even ask you whatever they want. About Perl, Python and Ruby, it is an Interview, they might be measuring your knowledge in other languages (if you heard about them, or if you know why .NET is better/worst). The important thing in an interview is that you answer the questions to the best of your abilities, so whats my opinion, if you dont know then just say you don't know about ADO Record Set, but you list the benefits/features of a .NET DataSet",
+      "votes": 0,
+      "isEdited": false,
+      "id": "1",
+      "questionId": "1",
+      "creatorId": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
+    },
+    {
+      "text": "I'd say it's fairly pointless these days. Anyone who doesn't know probably just hasnt worked with old applications. All the ADO functionality has been out of date for about a decade now and there are some fine devs with years of experience that will just never have seen ADO.\n  I've hired a lot, and the difference between the really excellent candidates and the average ones is not what obscure things they know now, but what they can go pick up quickly when they need to. \n In short a really good developer might answer this with: \"I've never worked with ADO, but I could go find out\", which isn't that useful for you as interviewer.",
+      "votes": 0,
+      "isEdited": false,
+      "id": "2",
+      "questionId": "1",
+      "creatorId": "98f8f269-a7a3-4676-b4d7-fa91e51baec9"
+    }
+  ],
+  "users": [
+    {
+      "name": "John",
+      "email": "john@gmail.com",
+      "password": "vsDF2yuA",
+      "carrer": "Software Engineer at Danske Bank",
+      "imageUrl": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "id": "98f8f269-a7a3-4676-b4d7-fa91e51baec9"
+    },
+    {
+      "name": "Elsa",
+      "email": "e@gmail.com",
+      "password": "xhs92821",
+      "carrer": "Data Analyst at Microsoft",
+      "imageUrl": "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "id": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
+    }
+  ]
+}
