@@ -3,10 +3,13 @@ import UsersContext from "../contexts/UsersContext"
 import * as Yup from 'yup'
 import { useFormik } from "formik"
 import { UserActionType } from "../contexts/constants"
+import { useNavigate } from "react-router"
 
 const Register = () => {
   const [failedRegistration, setFailedRegistration] = useState(false)
   const { users, dispatch, setCurrentUser } = useContext(UsersContext)
+
+  const navigate = useNavigate()
 
   const values = {
     name: '',
@@ -52,6 +55,8 @@ const Register = () => {
           email: values.email,
           password: values.password,
         })
+        navigate('/allQuestions')
+
       } else {
         setFailedRegistration(true)
       }
