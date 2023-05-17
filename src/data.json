@@ -40,7 +40,7 @@
       "name": "John",
       "email": "john@gmail.com",
       "password": "vsDF2yuA",
-      "carrer": "Software Engineer at Danske Bank",
+      "career": "Software Engineer at Danske Bank",
       "imageUrl": "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
       "id": "98f8f269-a7a3-4676-b4d7-fa91e51baec9"
     },
@@ -48,7 +48,7 @@
       "name": "Elsa",
       "email": "e@gmail.com",
       "password": "xhs92821",
-      "carrer": "Data Analyst at Microsoft",
+      "career": "Data Analyst at Microsoft",
       "imageUrl": "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
       "id": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
     }
