@@ -51,6 +51,11 @@
       "career": "Data Analyst at Microsoft",
       "imageUrl": "https://images.unsplash.com/photo-1557555187-23d685287bc3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
       "id": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
+    },
+    {
+      "email": "ei@gmail.com",
+      "password": "12345",
+      "id": "5070880a-75b1-4987-9e92-d4d13c43c353"
     }
   ]
 }
