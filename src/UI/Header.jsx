@@ -22,9 +22,9 @@ const Header = () => {
               }}><a>Log Out</a></li>
           }
           <li><NavLink to='/allQuestions'>All questions</NavLink></li>
-          <li>
-            {
-              currentUser &&
+          {
+            currentUser &&
+            <li>
               <div>
                 {currentUser.imageUrl ?
                   <img src={currentUser.imageUrl} alt="" /> :
@@ -33,8 +33,8 @@ const Header = () => {
                   </div>
                 }
               </div>
-            }
-          </li>
+            </li>
+          }
         </ul>
       </nav>
     </header>
