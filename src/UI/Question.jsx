@@ -41,7 +41,7 @@ const Question = ({ question }) => {
         <Vote question={question} />
         <div>
           <Link to=""><h2>{question.title}</h2></Link>
-          <p>{question.text}</p>
+          <p>{question.text.slice(0, 220)} <Link>(more...)</Link> </p>
         </div>
       </div>
     </div>
