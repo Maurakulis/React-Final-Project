@@ -16,10 +16,11 @@ main {
   justify-content: space-evenly;
   background-color: v.$header-color;
   box-sizing: border-box;
-  padding: 50px 0;
 
   >div {
     border-right: 1px solid v.$outline;
+    align-self: center;
+    height: 600px;
   }
 }
 
