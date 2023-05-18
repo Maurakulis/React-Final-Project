@@ -15,6 +15,10 @@ const Header = () => {
         </div>
         <ul>
           {
+            currentUser &&
+            <li><NavLink to='/newQuestion'><i className="fa-solid fa-plus"></i> new Question</NavLink></li>
+          }
+          {
             !currentUser ?
               <li><NavLink to='/'>Sign In</NavLink></li> :
               <li onClick={() => {

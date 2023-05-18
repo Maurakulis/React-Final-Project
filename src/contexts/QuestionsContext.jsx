@@ -14,6 +14,15 @@ const reducer = (questions, action) => {
         method: 'DELETE',
       })
       return questions.filter(e => e.id !== action.id)
+    case QuestionActionType.ADD:
+      fetch(DATA, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(action.data)
+      })
+      return [...questions, action.data]
     default:
       return questions
   }
