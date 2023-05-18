@@ -25,7 +25,7 @@ const Header = () => {
                 setCurrentUser(null)
               }}><a>Log Out</a></li>
           }
-          <li><NavLink to='/allQuestions'>All questions</NavLink></li>
+          <li><NavLink to='/questions'>All questions</NavLink></li>
           <li>
             {
               currentUser &&

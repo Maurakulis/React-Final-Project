@@ -74,6 +74,9 @@
 
   >div:nth-of-type(2) {
     flex: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
 
@@ -122,4 +125,8 @@
   div {
     border-bottom: 1px solid v.$outline;
   }
+}
+
+.specificQuestion {
+  border-bottom: 1px solid black;
 }

@@ -10,7 +10,7 @@
   gap: 10px;
 }
 
-main {
+main:not([class]) {
   display: flex;
   width: v.$width;
   justify-content: space-evenly;
@@ -26,15 +26,16 @@ main {
 
 main[class] {
   flex-direction: column;
-  padding: 50px 30px;
+  // padding: 50px 30px;
+  background-color: v.$header-color;
 
   form {
     padding: 0;
   }
 
-  div {
-    border: none;
-  }
+  // >div {
+  //   border: none;
+  // }
 }
 
 .image {
@@ -51,3 +52,25 @@ main[class] {
 @import './Forms';
 @import './Questions';
 @import './Header';
+
+@media screen and (max-width: 800px) {
+
+  main {
+    width: 90%;
+    flex-direction: column;
+
+    >div {
+      border-right: none;
+      border-bottom: 1px solid v.$outline;
+      height: 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  main {
+    width: 70%;
+  }
+}

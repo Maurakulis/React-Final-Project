@@ -3,7 +3,7 @@ import { QuestionActionType } from "./constants";
 
 const QuestionsContext = createContext()
 
-const DATA = 'http://localhost:8080/questions'
+export const DATA = 'http://localhost:8080/questions'
 
 const reducer = (questions, action) => {
   switch (action.type) {
