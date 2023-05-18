@@ -4,13 +4,14 @@
 
 #root {
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 
 main {
   display: flex;
   justify-content: center;
   gap: 100px;
+  background-color: v.$main-color;
 
   >div {
     border-right: 1px solid v.$outline;
@@ -18,3 +19,4 @@ main {
 }
 
 @import './Forms';
+@import './Questions';

@@ -1,0 +1,112 @@
+@use 'variables' as v;
+
+.allQuestions {
+  width: 90%;
+}
+
+.question {
+  background-color: v.$header-color;
+  padding: 20px;
+  margin: 10px 0;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  position: relative;
+
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  div:nth-of-type(1) {
+    flex: 1;
+    text-align: center;
+
+    img {
+      width: 50px;
+      height: 50px;
+      border-radius: 5px;
+      object-fit: cover;
+    }
+  }
+
+  div:nth-of-type(2) {
+    flex: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    >span:nth-of-type(1) {
+      font-weight: 500;
+    }
+
+    >span:nth-of-type(2) {
+      font-size: 13px;
+    }
+  }
+
+  i {
+    align-self: flex-start;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
+
+.questionInfo {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+
+  >div:nth-of-type(1) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  >div:nth-of-type(2) {
+    flex: 10;
+  }
+}
+
+.vote {
+  i {
+    font-size: 50px;
+  }
+
+  span {
+    font-size: 30px;
+  }
+}
+
+.userMenu {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: #e0e0e0;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+
+  button {
+    border: none;
+    background-color: transparent;
+    font-weight: 500;
+  }
+
+  div {
+    border-bottom: 1px solid v.$outline;
+  }
+}
