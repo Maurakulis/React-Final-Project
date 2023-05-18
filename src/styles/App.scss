@@ -37,10 +37,6 @@ main[class] {
   }
 }
 
-@import './Forms';
-@import './Questions';
-@import './Header';
-
 .image {
   background-color: v.$secondary-color;
   width: 50px;
@@ -51,3 +47,7 @@ main[class] {
   color: #fff;
   border-radius: 5px;
 }
+
+@import './Forms';
+@import './Questions';
+@import './Header';
