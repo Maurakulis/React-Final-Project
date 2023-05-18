@@ -5,6 +5,7 @@ import { useContext } from 'react'
 import UsersContext from './contexts/UsersContext'
 import AllQuestions from './Pages/AllQuestions'
 import Header from './UI/Header'
+import NewQuestion from './Pages/NewQuestion'
 
 const App = () => {
   const { currentUser } = useContext(UsersContext)
@@ -15,6 +16,10 @@ const App = () => {
       <Routes>
         <Route index element={<LoginAndRegister />} />
         <Route path='allQuestions' element={<AllQuestions />} />
+        {
+          currentUser &&
+          <Route path='newQuestion' element={<NewQuestion />} />
+        }
       </Routes >
     </>
   )
