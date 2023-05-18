@@ -17,9 +17,17 @@ const Question = ({ question }) => {
         {
           users.length &&
           <>
-            <div>
-              <img src={user.imageUrl} alt="" />
-            </div>
+            {
+              user.imageUrl ?
+                <div>
+                  <img src={user.imageUrl} alt="" />
+                </div> :
+                <div>
+                  <div className="image">
+                    <span>{user.name.slice(0, 1)}</span>
+                  </div>
+                </div>
+            }
             <div>
               <span>{user.name}</span>
               <span>{user.career}</span>
