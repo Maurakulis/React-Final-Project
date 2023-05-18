@@ -7,7 +7,8 @@ form {
   padding: 50px 20px 80px 20px;
 
 
-  input {
+  input,
+  textarea {
     line-height: 28px;
     padding: 8px 16px;
     width: 100%;
@@ -20,10 +21,20 @@ form {
     box-shadow: #3c425729 0px 0px 0px 1px;
   }
 
+  textarea {
+    min-height: 200px;
+    resize: vertical;
+    max-height: 450px;
+  }
+
   input[type=submit] {
     color: #fff;
     background-color: v.$button-color;
     font-weight: 600;
     cursor: pointer;
+  }
+
+  p {
+    font-size: 12px;
   }
 }

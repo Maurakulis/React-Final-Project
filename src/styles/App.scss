@@ -15,10 +15,24 @@ main {
   width: v.$width;
   justify-content: space-evenly;
   background-color: v.$header-color;
+  box-sizing: border-box;
   padding: 50px 0;
 
   >div {
     border-right: 1px solid v.$outline;
+  }
+}
+
+main[class] {
+  flex-direction: column;
+  padding: 50px 30px;
+
+  form {
+    padding: 0;
+  }
+
+  div {
+    border: none;
   }
 }
 
