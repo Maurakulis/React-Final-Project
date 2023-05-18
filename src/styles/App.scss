@@ -25,6 +25,8 @@ main:not([class]) {
 }
 
 main[class] {
+  display: flex;
+  align-items: center;
   flex-direction: column;
   // padding: 50px 30px;
   background-color: v.$header-color;
@@ -52,6 +54,7 @@ main[class] {
 @import './Forms';
 @import './Questions';
 @import './Header';
+@import './SpecificQuestion';
 
 @media screen and (max-width: 800px) {
 

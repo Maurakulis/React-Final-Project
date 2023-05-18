@@ -25,9 +25,6 @@ const SpecificQuestion = () => {
         }
       </section>
       <section>
-
-        <p>hello</p>
-        <p>hello</p>
       </section>
     </main>
   )
