@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
   return (
     <header>
       <nav>
         <div>
-          <img src="/stonks.png" alt="" />
+          <Link to='/allQuestions'>
+            <img src="/stonks.png" alt="" />
+          </Link>
         </div>
         <ul>
-          <li><Link to='/'>Sign In</Link></li>
-          <li><Link to='/allQuestions'>All questions</Link></li>
+          <li><NavLink to='/'>Sign In</NavLink></li>
+          <li><NavLink to='/allQuestions'>All questions</NavLink></li>
         </ul>
       </nav>
     </header>

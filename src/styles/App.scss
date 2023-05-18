@@ -3,14 +3,19 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
 
 #root {
-  margin: 0 auto;
+  background-color: v.$main-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 main {
   display: flex;
-  justify-content: center;
-  gap: 100px;
-  background-color: v.$main-color;
+  width: v.$width;
+  justify-content: space-evenly;
+  background-color: v.$header-color;
+  padding: 50px 0;
 
   >div {
     border-right: 1px solid v.$outline;

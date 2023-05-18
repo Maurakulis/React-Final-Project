@@ -1,15 +1,17 @@
 @use 'variables' as v;
 
 header {
+  background-color: v.$header-color;
   display: flex;
   justify-content: center;
   padding: 20px 0;
+  width: 100%;
 
   nav {
+    width: v.$width;
     height: 70px;
     display: flex;
     justify-content: space-between;
-    width: v.$width;
   }
 
   img {
@@ -31,6 +33,12 @@ header {
 
     a {
       text-decoration: none;
+      font-weight: 600;
+      color: v.$text-color-primary;
+    }
+
+    a.active {
+      color: v.$secondary-color;
     }
   }
 }
