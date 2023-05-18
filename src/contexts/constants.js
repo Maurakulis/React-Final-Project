@@ -5,7 +5,7 @@ export const UserActionType = {
 }
 
 export const QuestionActionType = {
-  GET: 'get_all_users',
-  ADD: 'add_user',
-  DELETE: 'delete_user',
+  GET: 'get_all_questions',
+  ADD: 'add_question',
+  DELETE: 'delete_question',
 }
