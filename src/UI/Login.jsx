@@ -32,7 +32,7 @@ const Login = () => {
       if (loggedInUser) {
         setCurrentUser(loggedInUser)
         setFailedLogin(false)
-        navigate('/allQuestions')
+        navigate('/questions')
       } else {
         setFailedLogin(true)
       }

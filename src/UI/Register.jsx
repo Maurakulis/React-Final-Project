@@ -55,7 +55,7 @@ const Register = () => {
           email: values.email,
           password: values.password,
         })
-        navigate('/allQuestions')
+        navigate('/questions')
 
       } else {
         setFailedRegistration(true)
