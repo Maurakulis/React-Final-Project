@@ -24,3 +24,4 @@ dist-ssr
 *.sw?
 *.css
 *.css.map
+data_copy.json

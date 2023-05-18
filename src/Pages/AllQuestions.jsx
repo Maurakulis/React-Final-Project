@@ -1,11 +1,9 @@
 import { useContext } from "react"
 import QuestionsContext from "../contexts/QuestionsContext"
 import Question from "../UI/Question"
-import UsersContext from "../contexts/UsersContext"
 
 const AllQuestions = () => {
   const { questions } = useContext(QuestionsContext)
-  const { currentUser } = useContext(UsersContext)
 
   return (
     <main>

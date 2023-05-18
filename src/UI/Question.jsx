@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom"
 import Vote from "./Vote"
-import { useContext, useState } from "react"
+import { useContext } from "react"
 import UsersContext from "../contexts/UsersContext"
-import QuestionsContext from "../contexts/QuestionsContext"
-import { QuestionActionType } from "../contexts/constants"
+
 import QuestionMenu from "./QuestionMenu"
 
 const Question = ({ question }) => {
-  const { users, currentUser } = useContext(UsersContext)
-  const { dispatch } = useContext(QuestionsContext)
+  const { users } = useContext(UsersContext)
 
 
   const user = users.find(e => e.id === question.creatorId)
