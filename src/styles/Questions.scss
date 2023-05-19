@@ -18,6 +18,12 @@
   p {
     margin-bottom: 0;
   }
+
+  >div:nth-of-type(1) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 
 .userInfo {

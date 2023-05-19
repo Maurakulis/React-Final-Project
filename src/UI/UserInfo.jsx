@@ -1,4 +1,3 @@
-import QuestionMenu from "./QuestionMenu"
 import { useContext } from "react"
 import UsersContext from "../contexts/UsersContext"
 
@@ -29,8 +28,6 @@ const UserInfo = ({ data }) => {
           </div>
         </>
       }
-      <QuestionMenu question={data}></QuestionMenu>
-
     </div>
   )
 }

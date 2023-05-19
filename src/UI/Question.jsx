@@ -1,14 +1,24 @@
 import { Link } from "react-router-dom"
 import Vote from "./Vote"
 import UserInfo from "./UserInfo"
+import QuestionMenu from "./QuestionMenu"
+import { useContext } from "react"
+import UsersContext from "../contexts/UsersContext"
 
 
 const Question = ({ question }) => {
-
+  const { currentUser } = useContext(UsersContext)
 
   return (
     <div className="question">
-      <UserInfo data={question} />
+      <div>
+        <UserInfo data={question} />
+        {
+          currentUser &&
+          <QuestionMenu question={question}></QuestionMenu>
+
+        }
+      </div>
       <div className="questionInfo">
         <Vote data={question} />
         <div>
