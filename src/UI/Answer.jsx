@@ -5,7 +5,7 @@ const Answer = ({ answer }) => {
   return (
     <section>
       <div>
-        <Vote question={answer} />
+        <Vote data={answer} />
       </div>
       <div>
         <p>{answer.text}</p>

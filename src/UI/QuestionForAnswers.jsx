@@ -10,7 +10,7 @@ const QuestionForAnswers = ({ question }) => {
     <div>
       <h2>{question.title}</h2>
       <div className="questionInfo">
-        <Vote question={question} />
+        <Vote data={question} />
         <div>
           <p>{question.text}</p>
         </div>
