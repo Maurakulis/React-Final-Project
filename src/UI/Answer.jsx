@@ -13,7 +13,7 @@ const Answer = ({ answer }) => {
         <h2>Answer</h2>
         {
           currentUser && currentUser.id === answer.creatorId &&
-          <AnswerMenu></AnswerMenu>
+          <AnswerMenu answer={answer}></AnswerMenu>
         }
       </div>
       <div className="answerInfo">

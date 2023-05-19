@@ -1,7 +1,8 @@
 import { useContext, useState } from "react"
 import AnswersContext from "../contexts/AnswersContext"
+import { AnswerActionType } from "../contexts/constants"
 
-const AnswerMenu = () => {
+const AnswerMenu = ({ answer }) => {
   const [menuIsPressed, setMenuIsPressed] = useState(false)
   const { dispatch } = useContext(AnswersContext)
 
@@ -12,7 +13,10 @@ const AnswerMenu = () => {
   }
 
   const deleteAnswer = () => {
-    console.log('deleted')
+    dispatch({
+      type: AnswerActionType.DELETE,
+      id: answer.id
+    })
     setMenuIsPressed(!menuIsPressed)
 
   }
