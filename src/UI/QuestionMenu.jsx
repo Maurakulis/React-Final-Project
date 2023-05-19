@@ -8,7 +8,6 @@ const QuestionMenu = ({ question }) => {
   const { currentUser } = useContext(UsersContext)
   const { dispatch } = useContext(QuestionsContext)
 
-
   const deleteQuestion = () => {
     dispatch({
       type: QuestionActionType.DELETE,

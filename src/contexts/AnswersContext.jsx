@@ -8,6 +8,11 @@ const reducer = (answers, action) => {
   switch (action.type) {
     case AnswerActionType.GET:
       return action.data
+    case AnswerActionType.DELETE:
+      fetch(DATA.ANSWERS + '/' + action.id, {
+        method: 'DELETE',
+      })
+      return answers.filter(e => e.id !== action.id)
     default:
       return answers
   }
