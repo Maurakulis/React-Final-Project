@@ -29,7 +29,7 @@ const SpecificQuestion = () => {
       </section>
       {
         Array.isArray(answers) && answers.length > 0 &&
-        <section>
+        <>
           {
             answers.map(answer => {
               if (answer.questionId === id) {
@@ -37,7 +37,7 @@ const SpecificQuestion = () => {
               }
             })
           }
-        </section>
+        </>
       }
     </main>
   )

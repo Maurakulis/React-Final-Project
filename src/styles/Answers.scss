@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+.answer {
+  width: 80%;
+  border-bottom: 1px solid v.$outline;
+  padding-bottom: 30px;
+}
+
+.answerInfo {
+  display: flex;
+  gap: 10px;
+
+  div:nth-of-type(1) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div:nth-of-type(2) {
+    flex: 10;
+
+  }
+}

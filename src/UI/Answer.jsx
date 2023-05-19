@@ -4,19 +4,16 @@ import Vote from "./Vote"
 const Answer = ({ answer }) => {
 
   return (
-    <section>
-      <div>
+    <div className="answer">
+      <h2>Answer</h2>
+      <div className="answerInfo">
         <Vote data={answer} />
+        <div>
+          <p>{answer.text}</p>
+        </div>
       </div>
-      <div>
-        <p>{answer.text}</p>
-        <p>{answer.questionId}</p>
-      </div>
-      <div>
-        <UserInfo data={answer} />
-
-      </div>
-    </section>
+      <UserInfo data={answer} />
+    </div>
   )
 }
 
