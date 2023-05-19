@@ -1,6 +1,7 @@
 @use 'variables' as v;
 
 .answer {
+  position: relative;
   width: 80%;
   border-bottom: 1px solid v.$outline;
   padding-bottom: 30px;
@@ -30,6 +31,5 @@
 
   div:nth-of-type(2) {
     flex: 10;
-
   }
 }
