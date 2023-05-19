@@ -15,7 +15,7 @@ const QuestionForAnswers = ({ question }) => {
           <p>{question.text}</p>
         </div>
       </div>
-      <UserInfo question={question} />
+      <UserInfo data={question} />
     </div>
   )
 }

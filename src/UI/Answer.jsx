@@ -1,3 +1,4 @@
+import UserInfo from "./UserInfo"
 import Vote from "./Vote"
 
 const Answer = ({ answer }) => {
@@ -10,6 +11,10 @@ const Answer = ({ answer }) => {
       <div>
         <p>{answer.text}</p>
         <p>{answer.questionId}</p>
+      </div>
+      <div>
+        <UserInfo data={answer} />
+
       </div>
     </section>
   )

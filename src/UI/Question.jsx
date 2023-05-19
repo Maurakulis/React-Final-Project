@@ -8,7 +8,7 @@ const Question = ({ question }) => {
 
   return (
     <div className="question">
-      <UserInfo question={question} />
+      <UserInfo data={question} />
       <div className="questionInfo">
         <Vote data={question} />
         <div>
