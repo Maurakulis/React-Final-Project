@@ -1,0 +1,24 @@
+@use 'variables' as v;
+
+.voteError {
+  top: 120px;
+  left: 45vw;
+  z-index: 10;
+  position: fixed;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  p {
+    color: red;
+  }
+
+  i {
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
