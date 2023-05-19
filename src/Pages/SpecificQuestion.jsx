@@ -1,11 +1,14 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router"
 import QuestionForAnswers from "../UI/QuestionForAnswers"
 import { DATA } from "../contexts/constants"
+import AnswersContext from "../contexts/AnswersContext"
+import Answer from "../UI/Answer"
 
 const SpecificQuestion = () => {
   const { id } = useParams()
   const [question, setQuestion] = useState()
+  const { answers } = useContext(AnswersContext)
 
   useEffect(() => {
     (async () => {
@@ -24,8 +27,18 @@ const SpecificQuestion = () => {
             : <p>loading... 🐌</p>
         }
       </section>
-      <section>
-      </section>
+      {
+        Array.isArray(answers) && answers.length > 0 &&
+        <section>
+          {
+            answers.map(answer => {
+              if (answer.questionId === id) {
+                return <Answer answer={answer} key={answer.id}></Answer>
+              }
+            })
+          }
+        </section>
+      }
     </main>
   )
 }
