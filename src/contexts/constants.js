@@ -9,3 +9,15 @@ export const QuestionActionType = {
   ADD: 'add_question',
   DELETE: 'delete_question',
 }
+
+export const AnswerActionType = {
+  GET: 'get_all_answers',
+  ADD: 'add_answer',
+  DELETE: 'delete_answer',
+}
+
+export const DATA = {
+  QUESTIONS: 'http://localhost:8080/questions',
+  USERS: 'http://localhost:8080/users',
+  ANSWERS: 'http://localhost:8080/answers',
+}

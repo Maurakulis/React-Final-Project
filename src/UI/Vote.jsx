@@ -1,8 +1,8 @@
-const Vote = ({ question }) => {
+const Vote = ({ data }) => {
   return (
     <div className="vote">
       <i className="fa-solid fa-angle-up"></i>
-      <span>{question.votes}</span>
+      <span>{data.votes}</span>
       <i className="fa-solid fa-angle-down"></i>
     </div>
   )

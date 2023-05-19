@@ -2,10 +2,10 @@ import QuestionMenu from "./QuestionMenu"
 import { useContext } from "react"
 import UsersContext from "../contexts/UsersContext"
 
-const UserInfo = ({ question }) => {
+const UserInfo = ({ data }) => {
   const { users } = useContext(UsersContext)
 
-  const user = users.find(e => e.id === question.creatorId)
+  const user = users.find(e => e.id === data.creatorId)
 
   return (
     <div className="userInfo">
@@ -29,7 +29,7 @@ const UserInfo = ({ question }) => {
           </div>
         </>
       }
-      <QuestionMenu question={question}></QuestionMenu>
+      <QuestionMenu question={data}></QuestionMenu>
 
     </div>
   )
