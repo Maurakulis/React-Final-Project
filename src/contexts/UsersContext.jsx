@@ -1,11 +1,9 @@
 /* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer, useState } from "react";
-import { UserActionType } from "./constants";
+import { DATA, UserActionType } from "./constants";
 import { v4 as uuidv4 } from 'uuid';
 
 const UsersContext = createContext()
-
-const DATA = 'http://localhost:8080/users'
 
 const reducer = (users, action) => {
   switch (action.type) {
@@ -22,7 +20,7 @@ const reducer = (users, action) => {
         id: uuidv4(),
       }
 
-      fetch(DATA, {
+      fetch(DATA.USERS, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -42,7 +40,7 @@ const UsersProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(DATA)
+      const res = await fetch(DATA.USERS)
       const data = await res.json()
 
       dispatch({

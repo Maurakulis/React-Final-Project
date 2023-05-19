@@ -1,21 +1,19 @@
 import { createContext, useEffect, useReducer } from "react";
-import { QuestionActionType } from "./constants";
+import { DATA, QuestionActionType } from "./constants";
 
 const QuestionsContext = createContext()
-
-export const DATA = 'http://localhost:8080/questions'
 
 const reducer = (questions, action) => {
   switch (action.type) {
     case QuestionActionType.GET:
       return action.data
     case QuestionActionType.DELETE:
-      fetch(DATA + '/' + action.id, {
+      fetch(DATA.QUESTIONS + '/' + action.id, {
         method: 'DELETE',
       })
       return questions.filter(e => e.id !== action.id)
     case QuestionActionType.ADD:
-      fetch(DATA, {
+      fetch(DATA.QUESTIONS, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -33,7 +31,7 @@ const QuestionProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(DATA)
+      const res = await fetch(DATA.QUESTIONS)
 
       const data = await res.json()
 
