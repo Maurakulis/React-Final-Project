@@ -4,6 +4,16 @@
   width: 80%;
   border-bottom: 1px solid v.$outline;
   padding-bottom: 30px;
+
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    i {
+      font-size: 20px;
+    }
+  }
 }
 
 .answerInfo {
