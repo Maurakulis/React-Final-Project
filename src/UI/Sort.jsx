@@ -1,10 +1,16 @@
 const Sort = () => {
+  const sortByNewest = () => {
+    console.log('newest')
+  }
+  const sortByOldest = () => {
+    console.log('oldest')
+  }
+  const all = () => {
+    console.log('newest')
+  }
+
   return (
-    <section className="sorting">
-      <button>Newest</button>
-      <button>Oldest</button>
-      <button>All</button>
-    </section>
+    <></>
   )
 }
 
