@@ -23,7 +23,7 @@ const reducer = (answers, action) => {
         isEdited: false,
         id: uuidv4(),
         questionId: action.questionId,
-        creatorId: action.questionId,
+        creatorId: action.creatorId,
       }
 
       fetch(DATA.ANSWERS, {

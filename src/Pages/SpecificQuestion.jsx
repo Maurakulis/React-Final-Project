@@ -40,8 +40,8 @@ const SpecificQuestion = () => {
           }
         </>
       }
-      <section>
-        <AddAnswer />
+      <section className="addAnswer">
+        <AddAnswer question={question} />
       </section>
     </main>
   )
