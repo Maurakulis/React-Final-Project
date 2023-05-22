@@ -1,9 +1,5 @@
 @use 'variables' as v;
 
-.allQuestions {
-  width: v.$width;
-}
-
 .question {
   background-color: v.$header-color;
   padding: 20px;
