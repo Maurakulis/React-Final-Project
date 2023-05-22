@@ -28,16 +28,12 @@ main[class] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  // padding: 50px 30px;
+
   background-color: v.$header-color;
 
   form {
     padding: 0;
   }
-
-  // >div {
-  //   border: none;
-  // }
 }
 
 .image {
@@ -51,6 +47,31 @@ main[class] {
   border-radius: 5px;
 }
 
+.sorting {
+  align-self: flex-end;
+  padding: 20px;
+  display: flex;
+
+  gap: 10px;
+
+  button {
+    background-color: transparent;
+    padding: 10px;
+    border: none;
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 1px;
+    transition: 0.4s;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+  }
+
+  button:focus {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px;
+  }
+}
+
 @import './Forms';
 @import './Questions';
 @import './Header';
@@ -61,15 +82,16 @@ main[class] {
 @media screen and (max-width: 800px) {
 
   main {
-    width: 90%;
     flex-direction: column;
 
     >div {
-      border-right: none;
-      border-bottom: 1px solid v.$outline;
-      height: 0;
-      width: 100%;
+      display: none;
     }
+  }
+
+  main[class],
+  main:not([class]) {
+    width: 90%;
   }
 }
 
