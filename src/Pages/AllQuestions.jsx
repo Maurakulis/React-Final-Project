@@ -12,13 +12,24 @@ const AllQuestions = () => {
 
   const sortByOldest = () => {
     setButtonPressed('oldest')
-
   }
 
   const all = () => {
     setButtonPressed(null)
   }
-  console.log(buttonPressed)
+
+  const getSortedQuestions = () => {
+    const questionsCopy = [...questions]
+
+    switch (buttonPressed) {
+      case 'newest':
+        return questionsCopy.sort((a, b) => b.dateCreated - a.dateCreated)
+      case 'oldest':
+        return questionsCopy.sort((a, b) => a.dateCreated - b.dateCreated)
+      default:
+        return questions
+    }
+  }
 
   return (
     <main className="allQuestions">
@@ -28,10 +39,10 @@ const AllQuestions = () => {
         <button onClick={() => all()}>All</button>
       </section>
       {
-        Array.isArray(questions) && questions.length > 0 && buttonPressed === null &&
+        Array.isArray(questions) && questions.length > 0 &&
         <section className="allQuestions">
           {
-            questions.map(question =>
+            getSortedQuestions().map(question =>
               <Question question={question} key={question.id}></Question>)
           }
         </section>
