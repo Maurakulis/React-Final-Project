@@ -39,7 +39,7 @@ const AddQuestion = () => {
       const newQuestion = {
         title: values.title,
         text: values.text,
-        votes: 0,
+        votes: [],
         isEdited: false,
         id: uuidv4(),
         creatorId: currentUser.id,

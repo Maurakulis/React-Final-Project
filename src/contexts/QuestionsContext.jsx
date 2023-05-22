@@ -29,7 +29,7 @@ const reducer = (questions, action) => {
         },
         body: JSON.stringify(action.data)
       })
-      return action.data
+      return questions
     default:
       return questions
   }
