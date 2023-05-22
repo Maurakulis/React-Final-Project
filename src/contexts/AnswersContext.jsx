@@ -1,6 +1,8 @@
+/* eslint-disable no-case-declarations */
 import { createContext, useEffect, useReducer } from "react";
 import { DATA } from "./constants";
 import { AnswerActionType } from "./constants";
+import { v4 as uuidv4 } from 'uuid';
 
 const AnswersContext = createContext()
 
@@ -13,6 +15,25 @@ const reducer = (answers, action) => {
         method: 'DELETE',
       })
       return answers.filter(e => e.id !== action.id)
+    case AnswerActionType.ADD:
+
+      const newAnswer = {
+        text: action.text,
+        votes: 0,
+        isEdited: false,
+        id: uuidv4(),
+        questionId: action.questionId,
+        creatorId: action.questionId,
+      }
+
+      fetch(DATA.ANSWERS, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newAnswer)
+      })
+      return [...answers, newAnswer]
     default:
       return answers
   }

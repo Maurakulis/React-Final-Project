@@ -40,7 +40,9 @@ const SpecificQuestion = () => {
           }
         </>
       }
-      <AddAnswer />
+      <section>
+        <AddAnswer />
+      </section>
     </main>
   )
 }
