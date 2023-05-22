@@ -1,7 +1,6 @@
 import { useContext, useState } from "react"
 import QuestionsContext from "../contexts/QuestionsContext"
 import Question from "../UI/Question"
-import Sort from "../UI/Sort"
 
 const AllQuestions = () => {
   const { questions } = useContext(QuestionsContext)
