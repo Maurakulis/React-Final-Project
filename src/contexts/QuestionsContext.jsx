@@ -21,6 +21,15 @@ const reducer = (questions, action) => {
         body: JSON.stringify(action.data)
       })
       return [...questions, action.data]
+    case QuestionActionType.EDIT:
+      fetch(DATA.QUESTIONS + '/' + action.id, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(action.data)
+      })
+      return action.data
     default:
       return questions
   }

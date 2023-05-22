@@ -1,14 +1,29 @@
 import { useContext, useState } from "react"
 import UsersContext from "../contexts/UsersContext"
+import QuestionsContext from "../contexts/QuestionsContext"
+import { QuestionActionType } from "../contexts/constants"
 
 const Vote = ({ data }) => {
   const { currentUser } = useContext(UsersContext)
+  const { dispatch } = useContext(QuestionsContext)
   const [isFailedVote, setIsFailedvote] = useState(false)
+  const [vote, setVote] = useState(data.votes)
+
   const voteUp = () => {
-    console.log('voteUp')
+    // dispatch({
+    //   type: QuestionActionType.EDIT,
+    //   id: data.id,
+    //   data: data.votes + 1
+    // })
   }
   const voteDown = () => {
-    console.log('voteDown')
+    setVote(vote - 1)
+    console.log(vote)
+    dispatch({
+      type: QuestionActionType.EDIT,
+      id: data.id,
+      data: vote
+    })
 
   }
 
