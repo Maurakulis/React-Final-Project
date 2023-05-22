@@ -4,6 +4,7 @@ import QuestionForAnswers from "../UI/QuestionForAnswers"
 import { DATA } from "../contexts/constants"
 import AnswersContext from "../contexts/AnswersContext"
 import Answer from "../UI/Answer"
+import AddAnswer from "../UI/AddAnswer"
 
 const SpecificQuestion = () => {
   const { id } = useParams()
@@ -39,6 +40,7 @@ const SpecificQuestion = () => {
           }
         </>
       }
+      <AddAnswer />
     </main>
   )
 }
