@@ -28,7 +28,7 @@ const AllQuestions = () => {
         <button onClick={() => all()}>All</button>
       </section>
       {
-        Array.isArray(questions) && questions.length > 0 &&
+        Array.isArray(questions) && questions.length > 0 && buttonPressed === null &&
         <section className="allQuestions">
           {
             questions.map(question =>
