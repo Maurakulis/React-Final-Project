@@ -24,7 +24,7 @@ const AddQuestion = () => {
     title: Yup.string()
       .required('Question must have a title')
       .min(8, 'Title should not be shorter than 8 characters')
-      .max(40, 'Title should not be longer than 40 characters'),
+      .max(100, 'Title should not be longer than 100 characters'),
     text: Yup.string()
       .required('Question must have a explanation text')
       .min(20, 'Explanation should not be shorter than 20 characters')
@@ -42,13 +42,14 @@ const AddQuestion = () => {
         votes: 0,
         isEdited: false,
         id: uuidv4(),
-        creatorId: currentUser.id
+        creatorId: currentUser.id,
+        dateCreated: Date.now(),
       }
       dispatch({
         type: QuestionActionType.ADD,
         data: newQuestion
       })
-      navigate('/allQuestions')
+      navigate('/questions')
     }
   })
 

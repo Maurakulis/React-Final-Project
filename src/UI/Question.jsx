@@ -9,6 +9,9 @@ import UsersContext from "../contexts/UsersContext"
 const Question = ({ question }) => {
   const { currentUser } = useContext(UsersContext)
 
+  const date = new Date(question.dateCreated).toISOString().slice(0, 10)
+  const time = new Date(question.dateCreated).toISOString().slice(11, 16)
+
   return (
     <div className="question">
       <div>
@@ -26,6 +29,7 @@ const Question = ({ question }) => {
           <p>{question.text.slice(0, 220)}... (<Link>more</Link>) </p>
         </div>
       </div>
+      <p className="date">Created: {date + ' ' + time}</p>
     </div>
   )
 }
