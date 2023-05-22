@@ -19,7 +19,7 @@ const reducer = (answers, action) => {
 
       const newAnswer = {
         text: action.text,
-        votes: 0,
+        votes: [],
         isEdited: false,
         id: uuidv4(),
         questionId: action.questionId,

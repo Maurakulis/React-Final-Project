@@ -8,6 +8,7 @@ export const QuestionActionType = {
   GET: 'get_all_questions',
   ADD: 'add_question',
   DELETE: 'delete_question',
+  EDIT: 'edit_question',
 }
 
 export const AnswerActionType = {
