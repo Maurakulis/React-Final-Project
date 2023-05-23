@@ -10,6 +10,7 @@ import NewQuestion from './Pages/NewQuestion'
 import SpecificQuestion from './Pages/SpecificQuestion'
 import EditQuestion from './Pages/EditQuestion'
 import EditAnswer from './Pages/EditAnswer'
+import Footer from './UI/Footer'
 
 const App = () => {
   const { currentUser } = useContext(UsersContext)
@@ -28,6 +29,7 @@ const App = () => {
         <Route path='questions/edit/:id' element={currentUser ? <EditQuestion /> : <Navigate to='/' />} />
         <Route path='answer/edit/:id' element={currentUser ? <EditAnswer /> : <Navigate to='/' />} />
       </Routes >
+      <Footer />
     </>
   )
 }
