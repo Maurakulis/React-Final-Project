@@ -70,9 +70,12 @@ const Login = () => {
           </div>
         </div>
         <input type="submit" value="Login" />
-        {
-          failedLogin && <p>Incorrect inputs</p>
-        }
+        <div>
+
+          {
+            failedLogin && <span>Incorrect inputs</span>
+          }
+        </div>
       </form>
     </>
   )

@@ -37,6 +37,16 @@ form {
   p {
     font-size: 12px;
   }
+
+  div {
+    span {
+      color: v.$error-bg;
+    }
+
+    span:before {
+      content: 'X ';
+    }
+  }
 }
 
 .editQuestion {
