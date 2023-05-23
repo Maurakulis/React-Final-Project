@@ -34,6 +34,8 @@ const AllQuestions = () => {
   return (
     <main className="allQuestions">
       <section className="sorting">
+        <button onClick={() => { }}>↓ Answers</button>
+        <button onClick={() => { }}>↑ Answers</button>
         <button onClick={() => sortByNewest()}>Newest</button>
         <button onClick={() => sortByOldest()}>Oldest</button>
         <button onClick={() => all()}>All</button>
