@@ -15,10 +15,15 @@
     margin-bottom: 0;
   }
 
-  >div:nth-of-type(1) {
+  >div {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
+  }
+
+  i {
+    color: rgba(135, 135, 135, 0.381);
   }
 }
 
