@@ -7,6 +7,7 @@ import AllQuestions from './Pages/AllQuestions'
 import Header from './UI/Header'
 import NewQuestion from './Pages/NewQuestion'
 import SpecificQuestion from './Pages/SpecificQuestion'
+import EditQuestion from './Pages/EditQuestion'
 
 const App = () => {
   const { currentUser } = useContext(UsersContext)
@@ -24,6 +25,7 @@ const App = () => {
           // : navigate(-1)
         }
         <Route path='questions/:id' element={<SpecificQuestion />} />
+        <Route path='questions/edit/:id' element={<EditQuestion />} />
       </Routes >
     </>
   )
