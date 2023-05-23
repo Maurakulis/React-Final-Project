@@ -30,7 +30,15 @@ const Question = ({ question }) => {
           <p>{question.text.slice(0, 220)}... (<Link to={`/questions/${question.id}`}>more</Link>) </p>
         </div>
       </div>
-      <p className="date">Created: {date + ' ' + time}</p>
+      <div>
+        <p className="date">Created: {date + ' ' + time}</p>
+        {
+          question.isEdited &&
+          <abbr title="Was edited by user">
+            <i className="fa-solid fa-pen-to-square"></i>
+          </abbr>
+        }
+      </div>
     </div>
   )
 }
