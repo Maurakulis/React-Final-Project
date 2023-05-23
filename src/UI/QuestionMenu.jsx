@@ -20,7 +20,6 @@ const QuestionMenu = ({ question }) => {
   }
 
   const editQuestion = () => {
-    console.log('edited')
     navigate(`/questions/edit/${question.id}`)
     setMenuIsPressed(!menuIsPressed)
   }

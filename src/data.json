@@ -62,9 +62,9 @@
       "creatorId": "e053dcc3-f86a-4eac-a5f6-e8b5bb28db8a"
     },
     {
-      "text": "I'd say it's fairly pointless these days. Anyone who doesn't know probably just hasnt worked with old applications. All the ADO functionality has been out of date for about a decade now and there are some fine devs with years of experience that will just never have seen ADO.\n  I've hired a lot, and the difference between the really excellent candidates and the average ones is not what obscure things they know now, but what they can go pick up quickly when they need to. \n In short a really good developer might answer this with: \"I've never worked with ADO, but I could go find out\", which isn't that useful for you as interviewer.",
+      "text": "I'd say it's fairly pointless these days. Anyone who doesn't know probably just hasnt worked with old applications. All the ADO functionality has been out of date for about a decade now and there are some fine devs with years of experience that will just never have seen ADO.\n In short a really good developer might answer this with: \"I've never worked with ADO, but I could go find out\", which isn't that useful for you as interviewer.",
       "votes": [],
-      "isEdited": false,
+      "isEdited": true,
       "id": "2",
       "questionId": "1",
       "creatorId": "98f8f269-a7a3-4676-b4d7-fa91e51baec9"

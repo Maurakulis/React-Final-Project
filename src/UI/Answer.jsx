@@ -22,7 +22,15 @@ const Answer = ({ answer }) => {
           <p>{answer.text}</p>
         </div>
       </div>
-      <UserInfo data={answer} />
+      <div>
+        <UserInfo data={answer} />
+        {
+          answer.isEdited &&
+          <abbr title="Was edited by user">
+            <i className="fa-solid fa-pen-to-square"></i>
+          </abbr>
+        }
+      </div>
     </div>
   )
 }
