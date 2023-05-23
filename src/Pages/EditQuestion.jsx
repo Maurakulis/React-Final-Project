@@ -62,7 +62,10 @@ const EditQuestion = () => {
         question ?
 
           <form onSubmit={formik.handleSubmit} className="editQuestion">
-            <h2>Edit question</h2>
+            <div className="top">
+              <h2>Edit question</h2>
+              <button onClick={() => navigate(-1)}>X</button>
+            </div>
             <input type="text" name="title" id="title"
               value={formik.values.title}
               onChange={formik.handleChange}
@@ -83,8 +86,9 @@ const EditQuestion = () => {
                 formik.touched.text && formik.errors.text && <span>{formik.errors.text}</span>
               }
             </div>
-
-            <input type="submit" value="Save changes" />
+            <div className="buttons">
+              <input type="submit" value="Save changes" />
+            </div>
           </form> :
           <p>loading... 🐌</p>
 
