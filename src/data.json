@@ -37,16 +37,16 @@
           "vote": 1
         }
       ],
-      "isEdited": false,
+      "isEdited": true,
       "id": "4a3a5a4b-7c20-4fd5-9cdc-f496ac21f6aa",
       "creatorId": "5070880a-75b1-4987-9e92-d4d13c43c353",
       "dateCreated": 1624765902375
     },
     {
-      "title": "How to become happier?",
+      "title": "How to become happier? 🥑🥑",
       "text": "I'm a programmer and I don't know what's making me happy....🙉🥹🥑",
       "votes": [],
-      "isEdited": false,
+      "isEdited": true,
       "id": "be0e974a-417a-4c30-bd89-be0439c70048",
       "creatorId": "5070880a-75b1-4987-9e92-d4d13c43c353",
       "dateCreated": 1614765913347
