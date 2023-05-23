@@ -5,6 +5,6 @@
 
 ## Starting the project
 - install the dependencies by running `npm install`
-- start the json server by running `npm run server:start`
 - build css by running `npm run style:build`
+- start the json server by running `npm run server:start`
 - run project by `npm run dev`
