@@ -29,7 +29,13 @@ const reducer = (questions, action) => {
         },
         body: JSON.stringify(action.data)
       })
-      return questions
+      return questions.map(question => {
+        if (question.id === action.id) {
+          return { ...question, ...action.data }
+        } else {
+          return question
+        }
+      })
     default:
       return questions
   }

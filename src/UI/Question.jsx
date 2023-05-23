@@ -6,6 +6,7 @@ import { useContext } from "react"
 import UsersContext from "../contexts/UsersContext"
 
 
+
 const Question = ({ question }) => {
   const { currentUser } = useContext(UsersContext)
 
@@ -26,7 +27,7 @@ const Question = ({ question }) => {
         <Vote data={question} />
         <div>
           <Link to={`/questions/${question.id}`}><h2>{question.title}</h2></Link>
-          <p>{question.text.slice(0, 220)}... (<Link>more</Link>) </p>
+          <p>{question.text.slice(0, 220)}... (<Link to={`/questions/${question.id}`}>more</Link>) </p>
         </div>
       </div>
       <p className="date">Created: {date + ' ' + time}</p>

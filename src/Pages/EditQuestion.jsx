@@ -52,10 +52,9 @@ const EditQuestion = () => {
           isEdited: true,
         }
       })
-      navigate(-1)
+      navigate(`/questions`)
     }
   })
-
 
   return (
     <main>
