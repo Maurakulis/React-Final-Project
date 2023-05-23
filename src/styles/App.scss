@@ -2,6 +2,13 @@
 
 @import url(https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  color: #232323;
+}
+
 #root {
   background-color: v.$main-color;
   display: flex;
