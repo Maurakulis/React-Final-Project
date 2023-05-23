@@ -38,3 +38,11 @@ form {
     font-size: 12px;
   }
 }
+
+.editQuestion {
+  width: 100%;
+
+  textarea {
+    resize: none;
+  }
+}
