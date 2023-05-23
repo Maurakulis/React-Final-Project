@@ -50,7 +50,11 @@ const EditAnswer = () => {
     <main>
       {
         answer ?
-          <form onSubmit={formik.handleSubmit}>
+          <form onSubmit={formik.handleSubmit} className="edit">
+            <div className="top">
+              <h2>Edit answer</h2>
+              <a onClick={() => navigate(-1)}>X</a>
+            </div>
             <textarea name="text" id="text"
               value={formik.values.text}
               onChange={formik.handleChange}
