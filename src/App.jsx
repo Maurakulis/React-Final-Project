@@ -28,6 +28,13 @@ const App = () => {
 
         <Route path='questions/edit/:id' element={currentUser ? <EditQuestion /> : <Navigate to='/' />} />
         <Route path='answer/edit/:id' element={currentUser ? <EditAnswer /> : <Navigate to='/' />} />
+        <Route path='*' element={
+          <main>
+            <section>
+              <h2>Sorry, nothing in here ¯\_(ツ)_/¯</h2>
+            </section>
+          </main>
+        } />
       </Routes >
       <Footer />
     </>

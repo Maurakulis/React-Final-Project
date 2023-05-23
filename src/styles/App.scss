@@ -16,6 +16,7 @@ main:not([class]) {
   justify-content: space-evenly;
   background-color: v.$header-color;
   box-sizing: border-box;
+  min-height: 75vh;
 
   >div {
     border-right: 1px solid v.$outline;
