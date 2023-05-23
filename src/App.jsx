@@ -1,6 +1,7 @@
 import './styles/App.css'
 import LoginAndRegister from './Pages/LoginAndRegister'
-import { Route, Routes, useNavigate } from 'react-router'
+import { Route, Routes } from 'react-router'
+import { Navigate } from "react-router-dom"
 import { useContext } from 'react'
 import UsersContext from './contexts/UsersContext'
 import AllQuestions from './Pages/AllQuestions'
@@ -12,7 +13,6 @@ import EditAnswer from './Pages/EditAnswer'
 
 const App = () => {
   const { currentUser } = useContext(UsersContext)
-  const navigate = useNavigate()
 
   return (
     <>
@@ -20,14 +20,13 @@ const App = () => {
       <Routes>
         <Route index element={<LoginAndRegister />} />
         <Route path='questions' element={<AllQuestions />} />
-        {
-          // currentUser ?
-          <Route path='newQuestion' element={<NewQuestion />} />
-          // : navigate(-1)
-        }
+
+        <Route path='newQuestion' element={currentUser ? <NewQuestion /> : <Navigate to='/' />} />
+
         <Route path='questions/:id' element={<SpecificQuestion />} />
-        <Route path='questions/edit/:id' element={<EditQuestion />} />
-        <Route path='answer/edit/:id' element={<EditAnswer />} />
+
+        <Route path='questions/edit/:id' element={currentUser ? <EditQuestion /> : <Navigate to='/' />} />
+        <Route path='answer/edit/:id' element={currentUser ? <EditAnswer /> : <Navigate to='/' />} />
       </Routes >
     </>
   )
