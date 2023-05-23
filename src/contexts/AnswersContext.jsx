@@ -34,6 +34,21 @@ const reducer = (answers, action) => {
         body: JSON.stringify(newAnswer)
       })
       return [...answers, newAnswer]
+    case AnswerActionType.EDIT:
+      fetch(DATA.ANSWERS + '/' + action.id, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(action.data)
+      })
+      return answers.map(answer => {
+        if (answer.id === action.id) {
+          return { ...answer, ...action.data }
+        } else {
+          return answer
+        }
+      })
     default:
       return answers
   }

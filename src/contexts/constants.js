@@ -15,6 +15,7 @@ export const AnswerActionType = {
   GET: 'get_all_answers',
   ADD: 'add_answer',
   DELETE: 'delete_answer',
+  EDIT: 'edit_question',
 }
 
 export const DATA = {
