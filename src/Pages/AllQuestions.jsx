@@ -6,6 +6,12 @@ const AllQuestions = () => {
   const { questions } = useContext(QuestionsContext)
   const [buttonPressed, setButtonPressed] = useState(null)
 
+  const mostAnswers = () => {
+    setButtonPressed('most_answers')
+  }
+  const leastAnswers = () => {
+    setButtonPressed('least_answers')
+  }
   const sortByNewest = () => {
     setButtonPressed('newest')
   }
@@ -22,6 +28,10 @@ const AllQuestions = () => {
     const questionsCopy = [...questions]
 
     switch (buttonPressed) {
+      case 'most_answers':
+        return questionsCopy.sort((a, b) => b.answerCount - a.answerCount)
+      case 'least_answers':
+        return questionsCopy.sort((a, b) => a.answerCount - b.answerCount)
       case 'newest':
         return questionsCopy.sort((a, b) => b.dateCreated - a.dateCreated)
       case 'oldest':
@@ -34,6 +44,8 @@ const AllQuestions = () => {
   return (
     <main className="allQuestions">
       <section className="sorting">
+        <button onClick={() => leastAnswers()}>↓ Answers</button>
+        <button onClick={() => mostAnswers()}>↑ Answers</button>
         <button onClick={() => sortByNewest()}>Newest</button>
         <button onClick={() => sortByOldest()}>Oldest</button>
         <button onClick={() => all()}>All</button>

@@ -46,13 +46,20 @@ const QuestionProvider = ({ children }) => {
 
   useEffect(() => {
     (async () => {
-      const res = await fetch(DATA.QUESTIONS)
+      const questionsRequest = await fetch(DATA.QUESTIONS)
+      const questionsData = await questionsRequest.json()
 
-      const data = await res.json()
+      const answersRequest = await fetch(DATA.ANSWERS)
+      const answersData = await answersRequest.json()
 
+      for (const question of questionsData) {
+        question.answerCount = answersData.filter(a =>
+          a.questionId === question.id
+        ).length
+      }
       dispatch({
         type: QuestionActionType.GET,
-        data: data,
+        data: questionsData,
       })
     })()
   }, [])
