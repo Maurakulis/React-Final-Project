@@ -1,12 +1,16 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import { DATA } from "../contexts/constants"
+import { useContext, useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+import { DATA, QuestionActionType } from "../contexts/constants"
 import * as Yup from 'yup'
 import { useFormik } from "formik"
+import QuestionsContext from "../contexts/QuestionsContext"
 
 const EditQuestion = () => {
   const { id } = useParams()
+  const { dispatch } = useContext(QuestionsContext)
   const [question, setQuestion] = useState()
+
+  const navigate = useNavigate()
 
 
   useEffect(() => {
@@ -39,7 +43,16 @@ const EditQuestion = () => {
     initialValues,
     validationSchema,
     onSubmit: (values) => {
-      console.log(values)
+      dispatch({
+        type: QuestionActionType.EDIT,
+        id: question.id,
+        data: {
+          title: values.title,
+          text: values.text,
+          isEdited: true,
+        }
+      })
+      navigate(-1)
     }
   })
 

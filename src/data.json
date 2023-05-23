@@ -29,7 +29,7 @@
       "dateCreated": 1684765981322
     },
     {
-      "title": "Using the clock package in R",
+      "title": "Using the clock package in R 🐌",
       "text": "I'm trying to load in the clock packge to do some timezone related work but having trouble when loading it in. So I was able to install it using install.packages(\"clock\", repos = \"https://cloud.r-project.org\") but then when I call library(clock) I get the error as seen in the picture below. I've seen the warning and that shouldn't be too much of an issue but i have not seen the error before and am unable to solve it. I was mainly intrested in using this package to change the timezone to local areas using 'date_zone()' and/or 'set_date_zone()'. I'm using version 4.2.1 if thats any help.",
       "votes": [
         {
@@ -37,7 +37,7 @@
           "vote": 1
         }
       ],
-      "isEdited": false,
+      "isEdited": true,
       "id": "4a3a5a4b-7c20-4fd5-9cdc-f496ac21f6aa",
       "creatorId": "5070880a-75b1-4987-9e92-d4d13c43c353",
       "dateCreated": 1624765902375
