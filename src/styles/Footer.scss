@@ -1,0 +1,40 @@
+@use 'variables' as v;
+
+
+footer {
+  background-color: v.$header-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 25px 0;
+  width: 100%;
+
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: v.$width;
+
+
+    a {
+      color: v.$button-color;
+      transition: 0.4s;
+    }
+
+    a:hover {
+      color: v.$secondary-color;
+    }
+
+    i {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    color: v.$button-color;
+    font-size: 12px;
+    margin: 0;
+  }
+}
