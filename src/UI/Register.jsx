@@ -43,7 +43,6 @@ const Register = () => {
     initialValues: values,
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      console.log(values)
       const registerUser = users.find(user => user.email === values.email)
 
       if (registerUser === undefined) {
@@ -60,6 +59,7 @@ const Register = () => {
       } else {
         setFailedRegistration(true)
       }
+
     }
   })
 
@@ -74,10 +74,12 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {
-            formik.touched.name && formik.errors.name &&
-            <span>{formik.errors.name}</span>
-          }
+          <div>
+            {
+              formik.touched.name && formik.errors.name &&
+              <span>{formik.errors.name}</span>
+            }
+          </div>
         </div>
         <div>
           <label htmlFor="email">Email</label>
@@ -86,10 +88,12 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {
-            formik.touched.email && formik.errors.email &&
-            <span>{formik.errors.email}</span>
-          }
+          <div>
+            {
+              formik.touched.email && formik.errors.email &&
+              <span>{formik.errors.email}</span>
+            }
+          </div>
         </div>
         <div>
           <label htmlFor="password">Password</label>
@@ -98,10 +102,12 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {
-            formik.touched.password && formik.errors.password &&
-            <span>{formik.errors.password}</span>
-          }
+          <div>
+            {
+              formik.touched.password && formik.errors.password &&
+              <span>{formik.errors.password}</span>
+            }
+          </div>
         </div>
         <div>
           <label htmlFor="passwordConfirm">Repeat password</label>
@@ -110,15 +116,21 @@ const Register = () => {
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
           />
-          {
-            formik.touched.passwordConfirm && formik.errors.passwordConfirm &&
-            <span>{formik.errors.passwordConfirm}</span>
-          }
+          <div>
+
+            {
+              formik.touched.passwordConfirm && formik.errors.passwordConfirm &&
+              <span>{formik.errors.passwordConfirm}</span>
+            }
+          </div>
+
         </div>
         <input type="submit" value="Register" />
-        {
-          failedRegistration && <p>This email is already used</p>
-        }
+        <div>
+          {
+            failedRegistration && <span>This email is already used</span>
+          }
+        </div>
       </form>
     </>
   )

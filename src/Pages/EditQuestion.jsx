@@ -12,7 +12,6 @@ const EditQuestion = () => {
 
   const navigate = useNavigate()
 
-
   useEffect(() => {
     (async () => {
       const res = await fetch(DATA.QUESTIONS + '/' + id)
@@ -61,8 +60,11 @@ const EditQuestion = () => {
       {
         question ?
 
-          <form onSubmit={formik.handleSubmit} className="editQuestion">
-            <h2>Edit question</h2>
+          <form onSubmit={formik.handleSubmit} className="edit">
+            <div className="top">
+              <h2>Edit question</h2>
+              <a onClick={() => navigate(-1)}>X</a>
+            </div>
             <input type="text" name="title" id="title"
               value={formik.values.title}
               onChange={formik.handleChange}
@@ -83,8 +85,9 @@ const EditQuestion = () => {
                 formik.touched.text && formik.errors.text && <span>{formik.errors.text}</span>
               }
             </div>
-
-            <input type="submit" value="Save changes" />
+            <div className="buttons">
+              <input type="submit" value="Save changes" />
+            </div>
           </form> :
           <p>loading... 🐌</p>
 

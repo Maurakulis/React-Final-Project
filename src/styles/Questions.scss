@@ -27,6 +27,11 @@
   }
 }
 
+.question:last-of-type {
+  border-bottom: none;
+
+}
+
 .userInfo {
   display: flex;
   align-items: center;
